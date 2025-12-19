@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>المختبر | المهندس معتز البورجي</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+function checkPassword(){
+let p=document.getElementById("pass").value;
+document.getElementById("res").innerText =
+p.length>=12 ? "🔐 كلمة مرور قوية" : "⚠️ كلمة مرور ضعيفة";
+}
+</script>
+</head>
+<body>
+
+<div class="toggle" onclick="toggleMode()">🌓</div>
+
+<section>
+<h2>🧪 المختبر السيبراني</h2>
+
+<h3>🔐 اختبار قوة كلمة المرور</h3>
+<input id="pass" type="password" placeholder="اكتب كلمة المرور">
+<button onclick="checkPassword()">فحص</button>
+<p id="res"></p>
+
+<h3>💻 مختبر الطرفية (تعليمي)</h3>
+<textarea rows="5" placeholder="nmap -sV 192.168.1.1"></textarea>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
